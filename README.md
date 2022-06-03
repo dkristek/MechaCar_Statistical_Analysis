@@ -50,3 +50,14 @@ Lot 3 T-test
 ![Lot 3 T Test](https://github.com/dkristek/MechaCar_Statistical_Analysis/blob/main/images/lot_3_ttest.png)
 
 The p-value is 0.0416 and therefore significant at the 0.05 significance level. Therefore, we can reject the null hypothesis and say that the PSI of manufacturing lot 3 is statistically different from the population mean of 1,500 PSI. 
+
+
+## Study Design: MechaCar vs Competition
+To compare teh MechaCar to its competition we will use an ANOVA test. We are using an ANOVA test as it is an good method of comparing the mean of a value across multiple groups. We are designing this study to inform consumers of the qualities of the mechacar. The metrics we will use in this ANOVA test will be average cost (in USD), average fuel efficiency in cities, average fuel efficiency on highways, horse power, safety rating, number of seats, and average maintenance cost per year. As we are looking at many different variables we will perform a one-way ANOVA test for each of the metrics. The null and alternative hypotheseses for each of the ANOVA tests will be essentially the same.
+
+For example the hypotheses for the average cost ANOVA test would be:
+Ho: The mean cost for all brands of car are equal. (U1 = U2 = U3 ....)
+Ha: The mean cost for the MechaCar brand is different from all other groups
+
+The other ANOVA tests would have the same hypotheses but with the given metric replacing 'mean cost'
+The needed data for these tests would be the value of each metric for each make and model of car that we want to compare to the MechaCar. We would want to use a variety of brands and select models that are similar to the MechaCar.
