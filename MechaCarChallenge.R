@@ -6,7 +6,7 @@ linRegModel <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground
 linRegModel
 summary(linRegModel)
 
-#Trip Analysis Viz
+#Suspension Coil Summaries
 #total summary
 total_summary <- summarize(susCoil, Mean = mean(PSI), Median = median(PSI), SD = sd(PSI), Variation = var(PSI))
 
@@ -14,3 +14,10 @@ total_summary <- summarize(susCoil, Mean = mean(PSI), Median = median(PSI), SD =
 lot_summary <- summarize(group_by(susCoil, Manufacturing_Lot), Mean = mean(PSI), Median = median(PSI), SD = sd(PSI), Variation = var(PSI))
 
 
+# T Tests
+total_Ttest <- t.test(susCoil$PSI, mu = 1500)
+
+
+lot_1_Ttest <- t.test(subset(susCoil, Manufacturing_Lot == "Lot1")$PSI, mu = 1500)
+lot_2_Ttest <- t.test(subset(susCoil, Manufacturing_Lot == "Lot2")$PSI, mu = 1500)
+lot_3_Ttest <- t.test(subset(susCoil, Manufacturing_Lot == "Lot3")$PSI, mu = 1500)
